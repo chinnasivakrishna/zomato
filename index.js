@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 // Route to send OTP
 app.post('/send-otp', async (req, res) => {
   const { phoneNumber } = req.body;
+  console.log(phoneNumber)
   
   // Validate phone number format
   if (!phoneNumber || phoneNumber.length < 10) {
